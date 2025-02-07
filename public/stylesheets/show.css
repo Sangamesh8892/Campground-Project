@@ -1,0 +1,24 @@
+/* Adjusting the carousel image to crop */
+.carousel-inner {
+    height: 350px; /* Fixed height for the carousel */
+  }
+  
+  .carousel-inner img {
+
+    object-fit: cover; /* Ensures the image fills the space and crops if necessary */
+    object-position: center;
+    height: 100%; /* Makes sure the image height fills the carousel */
+    width: 100%; /* Ensures the image width covers the carousel */
+  }
+  
+  /* Ensuring the card maintains a fixed layout */
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .card-body {
+    flex-grow: 1; /* Ensures the body takes up remaining space */
+  }
+  

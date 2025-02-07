@@ -1,0 +1,52 @@
+<% layout('./layout/boilerplate') %>  
+<title>Register</title>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4 rounded-4" style="max-width: 500px; width: 100%;">
+        <h2 class="text-center mb-4">Register</h2>
+        <form action="register" class="validated-form needs-validation" novalidate method="post">
+            
+            <div class="mb-3">
+                <label for="username" class="form-label fw-bold">Username</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter your Username</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label fw-bold">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter your email</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label fw-bold">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter your Password</div>
+            </div>
+
+            <div class="d-grid">
+                <button class="btn btn-success fw-bold btn-lg">Register</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<script>
+    // Bootstrap validation script
+    (function () {
+        'use strict'
+        var forms = document.querySelectorAll('.needs-validation')
+        Array.prototype.slice.call(forms).forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+</script>

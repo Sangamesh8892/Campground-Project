@@ -1,0 +1,74 @@
+<% layout('./layout/boilerplate') %>
+<title>Login</title>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow">
+                <div class="card-body p-4">
+                    <h2 class="text-center mb-4">Welcome to Yelp! 👋</h2>
+                    <form action="login" class="validated-form" novalidate method="post">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                id="username" 
+                                name="username" 
+                                placeholder="Enter your username"
+                                required
+                            >
+                            <div class="invalid-feedback">
+                                Please enter your username
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="password" class="form-label">Password</label>
+                            <input 
+                                type="password" 
+                                class="form-control" 
+                                id="password" 
+                                name="password" 
+                                placeholder="••••••••"
+                                required
+                            >
+                            <div class="invalid-feedback">
+                                Please enter your password
+                            </div>
+                        </div>
+
+                        <div class="d-grid mb-3">
+                            <button class="btn btn-primary btn-lg">Sign In</button>
+                        </div>
+
+                      
+                        <div class="text-center mt-4">
+                            <span class="text-muted">Don't have an account? </span>
+                            <a href="/register" class="text-decoration-none">Sign up</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        border-radius: 1rem;
+        border: none;
+    }
+    .btn-primary {
+        background-color: #6366f1;
+        transition: all 0.3s;
+    }
+    .btn-primary:hover {
+        background-color: #4f46e5;
+        transform: translateY(-1px);
+    }
+    .form-control:focus {
+        border-color: #6366f1;
+        box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.25);
+    }
+</style>

@@ -1,0 +1,88 @@
+/* Card Styles */
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Hover Effects */
+.card:hover {
+    transform: translateY(-10px); /* Lifts the card slightly */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Image Styling */
+.card img {
+    transition: transform 0.3s ease;
+}
+
+/* Image Hover Effects */
+.card:hover img {
+    transform: scale(1.1); /* Zoom in image on hover */
+}
+
+/* Title Styling */
+.card-title {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Title Hover Effect */
+.card:hover .card-title {
+    color: #007bff; /* Change title color on hover */
+    transform: translateX(5px); /* Slide title slightly */
+}
+
+/* Card Body Styles */
+.card-body {
+    position: relative;
+    padding: 1.5rem;
+    z-index: 1;
+}
+
+/* View Details Button Styling */
+.card .btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+.card:hover .btn {
+    background-color: #007bff; /* Button background change */
+    color: #fff; /* Text color change */
+    transform: translateY(-5px); /* Lift button on hover */
+}
+
+/* Special Overlay Effect */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show overlay on hover */
+.card:hover::before {
+    opacity: 1;
+}
+
+/* Card Content Area */
+.card-body > div {
+    z-index: 2;
+}
+
+/* Add a subtle shadow on the text area */
+.card-body > div h5, .card-body > div p {
+    transition: text-shadow 0.3s ease;
+}
+
+/* Text Hover Effect */
+.card:hover .card-body > div h5, .card:hover .card-body > div p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
