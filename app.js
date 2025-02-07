@@ -94,7 +94,7 @@ app.use((req,res,next)=>{
     res.locals.error = req.flash('error');
     next()
 })
-app.get('/home', (req,res)=>{
+app.get('/', (req,res)=>{
     res.render('home.ejs')
 })
 app.use('/',userRoutes)
