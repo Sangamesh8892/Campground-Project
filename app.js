@@ -18,7 +18,7 @@ const User=require('./models/user.js')
 const userRoutes=require('./routes/users.js')
 const mongoSanitize=require('express-mongo-sanitize')
 const MongoStore = require('connect-mongo');
-const dbUrl='mongodb://127.0.0.1:27017/yelpcamp'
+const dbUrl=process.env.DB_URL
 // process.env.DB_URL
 
 mongoose.connect(dbUrl);
@@ -43,11 +43,10 @@ app.engine('ejs',ejsMate)
 
 
 
-
-app.listen(3000, ()=>{
-    console.log('listening')
-})
-
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Listening on port ${PORT}`)
+});
 
 
 
